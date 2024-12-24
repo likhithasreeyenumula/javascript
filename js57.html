@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>57</title>
+    <style type="text/css">
+        body{
+            background-color: blue;
+        }
+        table,tr,td{
+            border-collapse: collapse;
+            border-style: none;
+        }
+        .d1{
+            background-color: aqua;
+            width: 400px;
+            height: 100px;
+            margin-left: 600px;
+            margin-top: 250px;
+            color:yellow;
+            box-shadow: 4px 4px 4px;
+            padding:20px 20px 20px 20px;            
+        }
+        .bst1{
+            border-radius: 5px;
+            background-color: brown;
+        }
+        .tbs1{
+            border-radius: 5px;
+            background-color: green;
+            color: crimson;
+        }        
+    </style>
+</head>
+<body>
+    <form name="fm1">
+        <div class="d1">
+            <table>
+                <tr>
+                    <td>
+                        <label for="aval">PRINCIPAL</label>
+                        <input type="text" id="v1" name="aval" placeholder="a value" required focus class="tbs1"></input>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="bval">TIME</label>
+                        <input type="text" id="v2" name="bval" placeholder="b value" required class="tbs1"></input>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="cval">Rate of Interest</label>
+                        <input type="text" id="v3" name="cval" placeholder="c value" required class="tbs1"></input>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="position:relative; left:20px;">
+                        <input type="button" value="SI" class="bts1" onclick="sic()"></input>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="position:relative; left:20px;">
+                        <input type="button" value="CI" class="bts1" onclick="cic()"></input>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="position:relative; left:20px;">
+                        <input type="button" value="<-" class="bts1" onclick="reset()"></input>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+<script type="text/javascript">
+    function sic(){
+    p=parseInt(document.getElementById("v1").value);
+    t=parseInt(document.getElementById("v2").value);
+    r=parseInt(document.getElementById("v3").value);
+    si=p*t*r/100
+    alert(si,"Simple Interest")
+    }
+    function cic(){
+    p=parseInt(document.getElementById("v1").value);
+    t=parseInt(document.getElementById("v2").value);
+    r=parseInt(document.getElementById("v3").value);
+    ci=p*(math.pow(1+r/100,t))
+    alert(ci)
+    }
+</script>
+</html>
