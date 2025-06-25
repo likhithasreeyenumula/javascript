@@ -1,4 +1,4 @@
-<html>             
+<html>
     <head>
         <title>101</title>
         <script src="js link"></script>
